@@ -6,6 +6,7 @@ const Home = () => import('views/home/Home')
 const Category = () => import('views/category/Category')
 const Shopcar = () => import('views/shopcar/Shopcar')
 const Profile = () => import('views/profile/Profile')
+const Detail = () => import('views/detail/Detail')
 
 // 挂载
 Vue.use(VueRouter)
@@ -31,9 +32,23 @@ const routes = [
   {
     path: '/profile',
     component: Profile
+  },
+  {
+    path: '/detail',
+    component: Detail
   }
 ]
-export default new VueRouter({
+
+const router = new VueRouter({
   routes,
   mode: 'history'
 })
+
+router.afterEach((to, from) => {
+  if(to.path.indexOf('/detail') >= 0) {
+    // 让底部消失
+    
+  }
+})
+
+export default router;

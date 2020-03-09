@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <keep-alive exclude="Detail">
+      <router-view></router-view>
+    </keep-alive>
 
     <main-tab-bar></main-tab-bar>
   </div>
@@ -19,6 +21,6 @@
 <style lang="less">
 @import 'assets/css/base';
 // 字体图标库
-@import '//at.alicdn.com/t/font_1670452_0r38mv4lx9xd.css';
+@import '//at.alicdn.com/t/font_1670452_sdd1i2r3jss.css';
 
 </style>

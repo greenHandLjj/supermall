@@ -1,5 +1,5 @@
 <template>
-  <div id="tabBar">
+  <div id="tabBar" v-if="isShow">
     <slot />
   </div>
 </template>
@@ -11,6 +11,11 @@ export default {
   name: "TabBar",
   components: {
     TabBarItem
+  },
+  data() {
+    return {
+      isShow: true
+    }
   }
 }
 </script>
